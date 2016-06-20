@@ -20,6 +20,10 @@ function Sprite(img, x, y, width, height) {
         fireballSprite = new Sprite(img, 301, 0 , 107, 36 );
         backgroundSprite = new Sprite(img, 0, 0, 138, 114);
         backgroundSprite.color = "#88e4FD";
+        cloudSprite = new Sprite(img, 410, 0, 100, 61 );
+        okButtonSprite = new Sprite(img, 0, 75, 80, 37);
+        startMenuSprite = new Sprite(img,100, 80, 238, 87);
+        
 }
 
 Sprite.prototype.draw = function(renderingContext, x, y) {

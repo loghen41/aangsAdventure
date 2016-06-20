@@ -14,7 +14,10 @@ var currentState,
     frames = 0,
     height,
     aang,
-    fireballs;
+    clouds,
+    fireballs,
+    playerScore = 0,
+    highScore = 0;
 
 function Aang() {
     this.x = 100;
@@ -72,6 +75,11 @@ function Aang() {
         // If our player hits the top of the canvas, we crash him
         if (this.y <= 2) {
             currentState = states.Score;
+            updateScore()
+        }
+        if (this.y >= 420) {
+            currentState = states.Score;
+            updateScore()
         }
 
     };
@@ -93,39 +101,81 @@ function Aang() {
 function FireCollection() {
 
     this._fireballs = [];
-
     this.reset = function () {
         this._fireballs = [];
     };
-
     this.add = function () {
         this._fireballs.push(new Fireball());
     };
-
     this.update = function () {
-        if (frames % 100 === 0) { // Add a new coral to the game every 100 frames.
+        if (frames % 50 === 0) {
             this.add();
         }
+        for (var i = 0, len = this._fireballs.length; i < len; i++) {
+            var fireball = this._fireballs[i];
+                fireball.detectCollision();
+            fireball.x -= 2;
+            if (fireball.x < -fireball.width) {
+                this._fireballs.splice(i, 1);
+                i--;
+                len--;
+            }
+            if (fireball.x === aang.x) {
+                playerScore++;
+                document.getElementById('currentScore').innerHTML = playerScore;
+
+            }
+        }
     };
-    for (var i = 0, len = this._fireballs.length; i < len; i++) { // Iterate through the array of corals and update each.
-        var fireball = this._fireballs[i]; // The current coral.
-
-        if (i === 0) { // If this is the leftmost coral, it is the only coral that the fish can collide with . . .
-            fireball.detectCollision(); // . . . so, determine if the fish has collided with this leftmost coral.
-        }
-
-        fireball.x -= 2; // Each frame, move each coral two pixels to the left. Higher/lower values change the movement speed.
-        if (fireball.x < -coral.width) { // If the coral has moved off screen . . .
-            this._fireballs.splice(i, 1); // . . . remove it.
-            i--;
-            len--;
-        }
-    }
     
     this.draw = function () {
         for (var i = 0, len = this._fireballs.length; i < len; i++) {
             var fireball = this._fireballs[i];
             fireball.draw();
+        }
+    };
+}
+
+function Cloud() {
+    this.x = 430;
+    this.y =  (cloudSprite.height + 430)  * Math.random();
+    this.width = cloudSprite.width;
+    this.height = cloudSprite.height;
+    
+
+    this.draw = function () {
+        cloudSprite.draw(renderingContext, this.x, this.y);
+    }
+}
+
+
+function CloudCollection() {
+
+    this._clouds = [];
+    this.reset = function () {
+        this._clouds = [];
+    };
+    this.add = function () {
+        this._clouds.push(new Cloud());
+    };
+    this.update = function () {
+        if (frames % 100 === 0) {
+            this.add();
+        }
+        for (var i = 0, len = this._clouds.length; i < len; i++) {
+            var cloud = this._clouds[i];
+            cloud.x -= 1;
+            if (cloud.x < -cloud.width) {
+                this._clouds.splice(i, 1);
+                i--;
+                len--;
+            }
+        }
+    };
+    this.draw = function () {
+        for (var i = 0, len = this._clouds.length; i < len; i++) {
+            var cloud = this._clouds[i];
+            cloud.draw();
         }
     };
 }
@@ -142,6 +192,7 @@ function main() {
 
     aang = new Aang();
     fireballs = new FireCollection();
+    clouds = new CloudCollection();
 
     loadGraphics();
 }
@@ -154,7 +205,7 @@ function windowSetup() {
     //set the width and height if we are on a display with a width of > 500px or greater
 
     if (width >= 500) {
-        width = 300;
+        width = 430;
         height = 430;
         inputEvent = "mousedown";
     }
@@ -170,6 +221,7 @@ function onpress(evt) {
         case states.Hovering:
             currentState = states.Game;
             aang.jump();
+            document.getElementById('currentScore').innerHTML = playerScore;
             break;
 
         case states.Game:
@@ -185,17 +237,17 @@ function onpress(evt) {
                 mouseY = evt.touches[0].clientY;
             }
 
-        /*  // Check if within the okButton
+        // Check if within the okButton
          if (okButton.x < mouseX && mouseX < okButton.x + okButton.width &&
          okButton.y < mouseY && mouseY < okButton.y + okButton.height
          ) {
-         //console.log('click');
-         corals.reset();
-         currentState = states.Splash;
+         fireballs.reset();
+             clouds.reset();
+         currentState = states.Hovering;
          score = 0;
          }
          break;
-         */
+
     }
 }
 
@@ -215,23 +267,29 @@ function loadGraphics() {
         initSprites(this);
         renderingContext.fillStyle = backgroundSprite.color;
         renderingContext.fillRect(0, 0, width, height);
-
-
-        /*      okButton = {
-         x: (width - okButtonSprite.width) /2,
-         y: height - 200,
+        
+         okButton = {
+         x: (width - okButtonSprite.width)/ 2,
+         y: (height - okButtonSprite.height)/2,
          width: okButtonSprite.width,
          height: okButtonSprite.height
          };
-         */
+
+        startMenuBox = {
+            x: (width - startMenuSprite.width)/ 2,
+            y: (height - startMenuSprite.height)/2,
+            width: startMenuSprite.width,
+            height: startMenuSprite.height
+        };
+
         gameLoop();
 
     };
 }
 
 function Fireball() {
-    this.x = 200;
-    this.y = height - (fireballSprite.height + aangSprite.height + 120 + 200 * Math.random());
+    this.x = 430;
+    this.y =  (fireballSprite.height + 390)  * Math.random();
     this.width = fireballSprite.width;
     this.height = fireballSprite.height;
 
@@ -243,18 +301,16 @@ function Fireball() {
         // intersection
         var cx = Math.min(Math.max(aang.x, this.x), this.x + this.width);
         var cy1 = Math.min(Math.max(aang.y, this.y), this.y + this.height);
-        var cy2 = Math.min(Math.max(aang.y, this.y + this.height + 110), this.y + 2 * this.height + 80);
         // Closest difference
         var dx = aang.x - cx;
         var dy1 = aang.y - cy1;
-        var dy2 = aang.y - cy2;
         // Vector length
         var d1 = dx * dx + dy1 * dy1;
-        var d2 = dx * dx + dy2 * dy2;
         var r = aang.radius * aang.radius;
         // Determine intersection
-        if (r > d1 || r > d2) {
+        if (r > d1) {
             currentState = states.Score;
+           updateScore();
         }
     };
 
@@ -271,21 +327,40 @@ function gameLoop() {
 function update() {
     frames++;
 
-    /* if(currentState !== states.Score) {
-     foregroundPosition = (foregroundPosition - 2) % 14;
-     } */
+    if (currentState === states.Hovering) {
+        clouds.update();
+    }
     if (currentState === states.Game) {
        fireballs.update();
+        clouds.update();
     }
-
 
     aang.update()
 }
 
 function render() {
     renderingContext.fillRect(0, 0, width, height);
+    clouds.draw(renderingContext);
     fireballs.draw(renderingContext);
-
     aang.draw(renderingContext);
 
+    if (currentState === states.Score) {
+        okButtonSprite.draw(renderingContext, okButton.x, okButton.y);
+    }
+
+    if (currentState === states.Hovering) {
+        startMenuSprite.draw(renderingContext, startMenuBox.x, startMenuBox.y);
+    }
+
+}
+
+function updateScore() {
+    if (playerScore > highScore) {
+        highScore = playerScore;
+        document.getElementById('highScore').innerHTML = highScore;
+        playerScore = 0;
+    }
+    else {
+        playerScore = 0;
+    }
 }
