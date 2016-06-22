@@ -1,0 +1,16 @@
+body {
+    background: url("../images/backgroundImages/AangBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#game {
+    width: 40%;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 1px black;
+    margin-top: 5em;
+    text-align: center;
+    font-family: Papyrus;
+    padding: 3em;
+}

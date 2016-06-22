@@ -17,7 +17,9 @@ var currentState,
     clouds,
     fireballs,
     playerScore = 0,
-    highScore = 0;
+    highScore = 0,
+    savedHighScore,
+    selection = document.getElementById('selectDiff').value;
 
 function Aang() {
     this.x = 100;
@@ -99,7 +101,7 @@ function Aang() {
 
 }
 function FireCollection() {
-
+    selection = document.getElementById('selectDiff').value;
     this._fireballs = [];
     this.reset = function () {
         this._fireballs = [];
@@ -108,12 +110,37 @@ function FireCollection() {
         this._fireballs.push(new Fireball());
     };
     this.update = function () {
-        if (frames % 50 === 0) {
-            this.add();
+        
+        switch(selection) {
+            case 'grandma':
+                if (frames % 200 === 0) {
+                    this.add();
+                }
+                break;
+            case 'easy':
+            if (frames % 100 === 0) {
+                this.add();
+            }
+                break;
+            case 'medium':
+                if (frames % 50 === 0) {
+                    this.add();
+                }
+                break;
+            case 'hard':
+                if (frames % 25 === 0) {
+                    this.add();
+                }
+                break;
+            case 'insane':
+                if (frames % 10 === 0) {
+                    this.add();
+                }
+                break;
         }
         for (var i = 0, len = this._fireballs.length; i < len; i++) {
             var fireball = this._fireballs[i];
-                fireball.detectCollision();
+            fireball.detectCollision();
             fireball.x -= 2;
             if (fireball.x < -fireball.width) {
                 this._fireballs.splice(i, 1);
@@ -126,6 +153,7 @@ function FireCollection() {
 
             }
         }
+                
     };
     
     this.draw = function () {
@@ -185,10 +213,12 @@ function CloudCollection() {
 function main() {
     windowSetup();
     canvasSetup();
+    checkScore();
+
 
     currentState = states.Hovering;
 
-    document.body.appendChild(canvas);
+    document.getElementById('gameArea').appendChild(canvas);
 
     aang = new Aang();
     fireballs = new FireCollection();
@@ -354,13 +384,28 @@ function render() {
 
 }
 
+function checkScore() {
+    savedHighScore = localStorage.getItem('highScore');
+    if (highScore <= savedHighScore) {
+        highScore = savedHighScore;
+        document.getElementById('highScore').innerHTML = highScore;
+    }
+}
+
 function updateScore() {
     if (playerScore > highScore) {
         highScore = playerScore;
+        localStorage.setItem('highScore', highScore);
         document.getElementById('highScore').innerHTML = highScore;
         playerScore = 0;
     }
     else {
         playerScore = 0;
     }
+}
+
+function removeSelectMenu() {
+    var selectArea = document.getElementById('selectArea');
+    var selectMenu = document.getElementById('selectMenu');
+    var garbage = selectArea.removeChild(selectMenu);
 }

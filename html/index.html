@@ -5,11 +5,31 @@
     <title>Aang's Adventure</title>
     <script src="../js/gameGraphics.js"></script>
     <script src="../js/gameLogic.js"></script>
-
+    <link href="../css/stylesheet.css" rel="stylesheet">
 </head>
-<body onload = 'main()'>
-<div id="scoreDiv"> <h2>Player Score: <span id="currentScore">0</span></h2></div>
-<div id="highSoreDiv"><h2>High Score: <span id="highScore">0</span></h2></div>
-
+<body onload="checkScore();">
+<div id="game">
+    <div id='selectArea'>
+        <h1>Welcome to Aang's Adventure</h1>
+        <div id="selectMenu">
+            <label for="selectDiff">Game Difficulty</label>
+            <select id="selectDiff">
+                <option value="...">Select Difficulty</option>
+                <option value="grandma">Grandma</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="insane">Insane</option>
+            </select>
+            <div>
+                <button onclick="main(); removeSelectMenu();">Start Game</button>
+            </div>
+        </div>
+    </div>
+    <div id="gameArea">
+        <div id="scoreDiv"><h2>Player Score: <span id="currentScore">0</span></h2></div>
+        <div id="highSoreDiv"><h2>High Score: <span id="highScore">0</span></h2></div>
+    </div>
+</div>
 </body>
 </html>
