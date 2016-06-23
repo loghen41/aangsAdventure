@@ -64,14 +64,13 @@ function Aang() {
         this.y += this.velocity;
 
         // Change to the score state when fish touches the ground
-        if (this.y >= height - aangSprite.height - 10) {
-            this.y = height - aangSprite.height - 10;
+        if (this.y >= height - aangSprite[0].height + 55) {
 
             if (currentState === states.Game) {
                 currentState = states.Score;
+                updateScore();
             }
 
-            this.velocity = this._jump; // Set velocity to jump speed for correct rotation
         }
 
         // If our player hits the top of the canvas, we crash him
@@ -79,10 +78,7 @@ function Aang() {
             currentState = states.Score;
             updateScore()
         }
-        if (this.y >= 420) {
-            currentState = states.Score;
-            updateScore()
-        }
+
 
     };
 
@@ -243,7 +239,7 @@ function windowSetup() {
     if (width <= 500) {
         width = 430;
         height = 430;
-        inputEvent = "touchstart";
+        inputEvent = "mousedown";
     }
 
 
