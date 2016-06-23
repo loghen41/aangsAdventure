@@ -218,7 +218,7 @@ function main() {
 
     currentState = states.Hovering;
 
-    document.getElementById('gameArea').appendChild(canvas);
+    document.getElementById('theGame').appendChild(canvas);
 
     aang = new Aang();
     fireballs = new FireCollection();
@@ -233,11 +233,17 @@ function windowSetup() {
     height = window.innerHeight;
 
     //set the width and height if we are on a display with a width of > 500px or greater
-
     if (width >= 500) {
         width = 430;
         height = 430;
-        inputEvent = "mousedown";
+        inputEvent = 'mousedown';
+    }
+
+
+    if (width <= 500) {
+        width = 430;
+        height = 430;
+        inputEvent = "touchstart";
     }
 
 
@@ -283,7 +289,6 @@ function onpress(evt) {
 
 function canvasSetup() {
     canvas = document.createElement('canvas');
-    canvas.style.border = "15px solid #382b1d";
     canvas.width = width;
     canvas.height = height;
     renderingContext = canvas.getContext('2d');

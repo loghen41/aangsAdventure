@@ -21,8 +21,8 @@ function Sprite(img, x, y, width, height) {
         backgroundSprite = new Sprite(img, 0, 0, 138, 114);
         backgroundSprite.color = "#88e4FD";
         cloudSprite = new Sprite(img, 410, 0, 100, 61 );
-        okButtonSprite = new Sprite(img, 0, 75, 80, 37);
-        startMenuSprite = new Sprite(img,100, 80, 238, 87);
+        okButtonSprite = new Sprite(img, 300, 80, 238, 125);
+        startMenuSprite = new Sprite(img,0, 80, 238, 125);
         
 }
 
