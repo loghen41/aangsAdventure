@@ -1,3 +1,23 @@
+@media (min-width: 1000px) {
+    #theGame {
+        height: 800px !important;
+        width: 800px !important;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 999px) {
+    #theGame {
+        height: 650px !important;
+        width: 650px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    #theGame {
+        height: 430px !important;
+        width: 430px !important;
+    }
+}
 body {
     background: url("../images/backgroundImages/AangBackground.jpg") no-repeat center center fixed;
     background-size: cover;

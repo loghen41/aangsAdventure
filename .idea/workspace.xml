@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52cb6a9b-0d4a-4ad5-9689-af1b4087b5ee" name="Default" comment="initial commit">
+    <list default="true" id="52cb6a9b-0d4a-4ad5-9689-af1b4087b5ee" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/aangSheet.png" afterPath="$PROJECT_DIR$/images/aangSheet.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/stylesheet.css" afterPath="$PROJECT_DIR$/css/stylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/index.html" afterPath="$PROJECT_DIR$/html/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gameGraphics.js" afterPath="$PROJECT_DIR$/js/gameGraphics.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gameLogic.js" afterPath="$PROJECT_DIR$/js/gameLogic.js" />
     </list>
     <ignored path="AangsAdventure.iws" />
@@ -24,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+            <state relative-caret-position="480">
+              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -37,20 +41,34 @@
       <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+            <state relative-caret-position="60">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gameLogic.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gameLogic.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gameLogic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+            <state relative-caret-position="655">
+              <caret line="392" column="27" selection-start-line="392" selection-start-column="27" selection-end-line="392" selection-end-column="27" />
               <folding>
                 <element signature="e#0#48#0" expanded="false" />
+                <element signature="n#!!block;n#Aang#0" expanded="false" />
+                <element signature="n#!!block;n#FireCollection#0" expanded="false" />
+                <element signature="n#!!block;n#Cloud#0" expanded="false" />
+                <element signature="n#!!block;n#CloudCollection#0" expanded="false" />
+                <element signature="n#!!block;n#main#0" expanded="false" />
+                <element signature="n#!!block;n#onpress#0" expanded="false" />
+                <element signature="n#!!block;n#canvasSetup#0" expanded="false" />
+                <element signature="n#!!block;n#loadGraphics#0" expanded="false" />
+                <element signature="n#!!block;n#Fireball#0" expanded="false" />
+                <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+                <element signature="n#!!block;n#update#0" expanded="false" />
+                <element signature="n#!!block;n#checkScore#0" expanded="false" />
+                <element signature="n#!!block;n#updateScore#0" expanded="false" />
+                <element signature="n#!!block;n#removeSelectMenu#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -59,8 +77,8 @@
       <file leaf-file-name="gameGraphics.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gameGraphics.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+            <state relative-caret-position="255">
+              <caret line="19" column="17" selection-start-line="18" selection-start-column="10" selection-end-line="19" selection-end-column="17" />
               <folding>
                 <element signature="n#!!doc;n#Sprite#0" expanded="false" />
               </folding>
@@ -90,10 +108,10 @@
         <option value="$PROJECT_DIR$/gameLogic.js" />
         <option value="$PROJECT_DIR$/trent'sFiles/TrentsFishGame.js" />
         <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/js/gameGraphics.js" />
-        <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/css/stylesheet.css" />
+        <option value="$PROJECT_DIR$/js/gameGraphics.js" />
         <option value="$PROJECT_DIR$/js/gameLogic.js" />
+        <option value="$PROJECT_DIR$/html/index.html" />
       </list>
     </option>
   </component>
@@ -131,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -217,11 +234,12 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Angular-Scorecard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scratchpad" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -316,7 +334,9 @@
       <workItem from="1466516659215" duration="9147000" />
       <workItem from="1466563460645" duration="216000" />
       <workItem from="1466603087656" duration="5097000" />
-      <workItem from="1466689007496" duration="6069000" />
+      <workItem from="1466689007496" duration="7880000" />
+      <workItem from="1466741138206" duration="122000" />
+      <workItem from="1466775663137" duration="3747000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1466097590339</created>
@@ -353,19 +373,25 @@
       <option name="project" value="LOCAL" />
       <updated>1466698112883</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="initial commit">
+      <created>1466698852401</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1466698852401</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46892000" />
+    <option name="totallyTimeSpent" value="52572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24855188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24749868" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -374,6 +400,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -398,10 +425,62 @@
     <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gameLogic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3585">
+          <caret line="241" column="31" selection-start-line="241" selection-start-column="31" selection-end-line="241" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+            <element signature="n#!!block;n#Aang#0" expanded="false" />
+            <element signature="n#!!block;n#FireCollection#0" expanded="false" />
+            <element signature="n#!!block;n#Cloud#0" expanded="false" />
+            <element signature="n#!!block;n#CloudCollection#0" expanded="false" />
+            <element signature="n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onpress#0" expanded="false" />
+            <element signature="n#!!block;n#canvasSetup#0" expanded="false" />
+            <element signature="n#!!block;n#loadGraphics#0" expanded="false" />
+            <element signature="n#!!block;n#Fireball#0" expanded="false" />
+            <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+            <element signature="n#!!block;n#update#0" expanded="false" />
+            <element signature="n#!!block;n#checkScore#0" expanded="false" />
+            <element signature="n#!!block;n#updateScore#0" expanded="false" />
+            <element signature="n#!!block;n#removeSelectMenu#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gameGraphics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+          <folding>
+            <element signature="n#!!doc;n#Sprite#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -416,6 +495,20 @@
           <caret line="409" column="53" selection-start-line="409" selection-start-column="53" selection-end-line="409" selection-end-column="53" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
+            <element signature="n#!!block;n#Aang#0" expanded="false" />
+            <element signature="n#!!block;n#FireCollection#0" expanded="false" />
+            <element signature="n#!!block;n#Cloud#0" expanded="false" />
+            <element signature="n#!!block;n#CloudCollection#0" expanded="false" />
+            <element signature="n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onpress#0" expanded="false" />
+            <element signature="n#!!block;n#canvasSetup#0" expanded="false" />
+            <element signature="n#!!block;n#loadGraphics#0" expanded="false" />
+            <element signature="n#!!block;n#Fireball#0" expanded="false" />
+            <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+            <element signature="n#!!block;n#update#0" expanded="false" />
+            <element signature="n#!!block;n#checkScore#0" expanded="false" />
+            <element signature="n#!!block;n#updateScore#0" expanded="false" />
+            <element signature="n#!!block;n#removeSelectMenu#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -460,6 +553,20 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
+            <element signature="n#!!block;n#Aang#0" expanded="false" />
+            <element signature="n#!!block;n#FireCollection#0" expanded="false" />
+            <element signature="n#!!block;n#Cloud#0" expanded="false" />
+            <element signature="n#!!block;n#CloudCollection#0" expanded="false" />
+            <element signature="n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onpress#0" expanded="false" />
+            <element signature="n#!!block;n#canvasSetup#0" expanded="false" />
+            <element signature="n#!!block;n#loadGraphics#0" expanded="false" />
+            <element signature="n#!!block;n#Fireball#0" expanded="false" />
+            <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+            <element signature="n#!!block;n#update#0" expanded="false" />
+            <element signature="n#!!block;n#checkScore#0" expanded="false" />
+            <element signature="n#!!block;n#updateScore#0" expanded="false" />
+            <element signature="n#!!block;n#removeSelectMenu#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -490,6 +597,20 @@
           <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
+            <element signature="n#!!block;n#Aang#0" expanded="false" />
+            <element signature="n#!!block;n#FireCollection#0" expanded="false" />
+            <element signature="n#!!block;n#Cloud#0" expanded="false" />
+            <element signature="n#!!block;n#CloudCollection#0" expanded="false" />
+            <element signature="n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onpress#0" expanded="false" />
+            <element signature="n#!!block;n#canvasSetup#0" expanded="false" />
+            <element signature="n#!!block;n#loadGraphics#0" expanded="false" />
+            <element signature="n#!!block;n#Fireball#0" expanded="false" />
+            <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+            <element signature="n#!!block;n#update#0" expanded="false" />
+            <element signature="n#!!block;n#checkScore#0" expanded="false" />
+            <element signature="n#!!block;n#updateScore#0" expanded="false" />
+            <element signature="n#!!block;n#removeSelectMenu#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -536,6 +657,20 @@
           <caret line="284" column="19" selection-start-line="284" selection-start-column="19" selection-end-line="284" selection-end-column="19" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
+            <element signature="n#!!block;n#Aang#0" expanded="false" />
+            <element signature="n#!!block;n#FireCollection#0" expanded="false" />
+            <element signature="n#!!block;n#Cloud#0" expanded="false" />
+            <element signature="n#!!block;n#CloudCollection#0" expanded="false" />
+            <element signature="n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onpress#0" expanded="false" />
+            <element signature="n#!!block;n#canvasSetup#0" expanded="false" />
+            <element signature="n#!!block;n#loadGraphics#0" expanded="false" />
+            <element signature="n#!!block;n#Fireball#0" expanded="false" />
+            <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+            <element signature="n#!!block;n#update#0" expanded="false" />
+            <element signature="n#!!block;n#checkScore#0" expanded="false" />
+            <element signature="n#!!block;n#updateScore#0" expanded="false" />
+            <element signature="n#!!block;n#removeSelectMenu#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -566,6 +701,20 @@
           <caret line="284" column="19" selection-start-line="284" selection-start-column="19" selection-end-line="284" selection-end-column="19" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
+            <element signature="n#!!block;n#Aang#0" expanded="false" />
+            <element signature="n#!!block;n#FireCollection#0" expanded="false" />
+            <element signature="n#!!block;n#Cloud#0" expanded="false" />
+            <element signature="n#!!block;n#CloudCollection#0" expanded="false" />
+            <element signature="n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onpress#0" expanded="false" />
+            <element signature="n#!!block;n#canvasSetup#0" expanded="false" />
+            <element signature="n#!!block;n#loadGraphics#0" expanded="false" />
+            <element signature="n#!!block;n#Fireball#0" expanded="false" />
+            <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+            <element signature="n#!!block;n#update#0" expanded="false" />
+            <element signature="n#!!block;n#checkScore#0" expanded="false" />
+            <element signature="n#!!block;n#updateScore#0" expanded="false" />
+            <element signature="n#!!block;n#removeSelectMenu#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -596,6 +745,20 @@
           <caret line="75" column="25" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
+            <element signature="n#!!block;n#Aang#0" expanded="false" />
+            <element signature="n#!!block;n#FireCollection#0" expanded="false" />
+            <element signature="n#!!block;n#Cloud#0" expanded="false" />
+            <element signature="n#!!block;n#CloudCollection#0" expanded="false" />
+            <element signature="n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onpress#0" expanded="false" />
+            <element signature="n#!!block;n#canvasSetup#0" expanded="false" />
+            <element signature="n#!!block;n#loadGraphics#0" expanded="false" />
+            <element signature="n#!!block;n#Fireball#0" expanded="false" />
+            <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+            <element signature="n#!!block;n#update#0" expanded="false" />
+            <element signature="n#!!block;n#checkScore#0" expanded="false" />
+            <element signature="n#!!block;n#updateScore#0" expanded="false" />
+            <element signature="n#!!block;n#removeSelectMenu#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -630,39 +793,53 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/gameGraphics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+        <state relative-caret-position="255">
+          <caret line="19" column="17" selection-start-line="18" selection-start-column="10" selection-end-line="19" selection-end-column="17" />
           <folding>
             <element signature="n#!!doc;n#Sprite#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/gameLogic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        <state relative-caret-position="655">
+          <caret line="392" column="27" selection-start-line="392" selection-start-column="27" selection-end-line="392" selection-end-column="27" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
+            <element signature="n#!!block;n#Aang#0" expanded="false" />
+            <element signature="n#!!block;n#FireCollection#0" expanded="false" />
+            <element signature="n#!!block;n#Cloud#0" expanded="false" />
+            <element signature="n#!!block;n#CloudCollection#0" expanded="false" />
+            <element signature="n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onpress#0" expanded="false" />
+            <element signature="n#!!block;n#canvasSetup#0" expanded="false" />
+            <element signature="n#!!block;n#loadGraphics#0" expanded="false" />
+            <element signature="n#!!block;n#Fireball#0" expanded="false" />
+            <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+            <element signature="n#!!block;n#update#0" expanded="false" />
+            <element signature="n#!!block;n#checkScore#0" expanded="false" />
+            <element signature="n#!!block;n#updateScore#0" expanded="false" />
+            <element signature="n#!!block;n#removeSelectMenu#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

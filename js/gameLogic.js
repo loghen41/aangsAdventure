@@ -64,7 +64,7 @@ function Aang() {
         this.y += this.velocity;
 
         // Change to the score state when fish touches the ground
-        if (this.y >= height - aangSprite[0].height + 55) {
+        if (this.y >= height) {
 
             if (currentState === states.Game) {
                 currentState = states.Score;
@@ -161,8 +161,8 @@ function FireCollection() {
 }
 
 function Cloud() {
-    this.x = 430;
-    this.y =  (cloudSprite.height + 430)  * Math.random();
+    this.x = width;
+    this.y =  (height)  * Math.random();
     this.width = cloudSprite.width;
     this.height = cloudSprite.height;
     
@@ -227,19 +227,26 @@ function windowSetup() {
     //retrieve the width and height of the window
     width = window.innerWidth;
     height = window.innerHeight;
+    console.log(width);
 
     //set the width and height if we are on a display with a width of > 500px or greater
-    if (width >= 500) {
-        width = 430;
-        height = 430;
+
+    if (width >= 1000) {
+        width = 800;
+        height = 800;
         inputEvent = 'mousedown';
     }
 
+    else if (width >= 700) {
+        width = 650;
+        height = 650;
+        inputEvent = 'mousedown';
+    }
 
-    if (width <= 500) {
+    else if (width <= 500) {
         width = 430;
         height = 430;
-        inputEvent = "mousedown";
+        inputEvent = "touchstart";
     }
 
 
@@ -313,14 +320,20 @@ function loadGraphics() {
             height: startMenuSprite.height
         };
 
+        startMenuBox2 = {
+            x: (width - startMenuSprite2.width)/ 2,
+            y: (height - startMenuSprite2.height)/2,
+            width: startMenuSprite2.width,
+            height: startMenuSprite2.height
+        };
         gameLoop();
 
     };
 }
 
 function Fireball() {
-    this.x = 430;
-    this.y =  (fireballSprite.height + 390)  * Math.random();
+    this.x = width;
+    this.y =  (height)  * Math.random();
     this.width = fireballSprite.width;
     this.height = fireballSprite.height;
 
@@ -375,13 +388,22 @@ function render() {
     fireballs.draw(renderingContext);
     aang.draw(renderingContext);
 
-    if (currentState === states.Score) {
-        okButtonSprite.draw(renderingContext, okButton.x, okButton.y);
+    if (currentState === states.Hovering) {
+        console.log(width);
+        if (width <= 500) {
+            startMenuSprite2.draw(renderingContext, startMenuBox.x, startMenuBox.y);
+        }
+        else {
+            startMenuSprite.draw(renderingContext, startMenuBox.x, startMenuBox.y);
+        }
+
     }
 
-    if (currentState === states.Hovering) {
-        startMenuSprite.draw(renderingContext, startMenuBox.x, startMenuBox.y);
+    if (currentState === states.Score) {
+            okButtonSprite.draw(renderingContext, okButton.x, okButton.y);
     }
+
+
 
 }
 
